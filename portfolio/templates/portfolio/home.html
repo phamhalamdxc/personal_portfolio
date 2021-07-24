@@ -1,7 +1,12 @@
 <h1>Lam Pham's Portfolio</h1>
 
 {% for project in projects%}
+<div class="">
   <h2>{{ project.title}}</h2>
   <p>{{ project.description}}</p>
   <img src="{{ project.image.url}}"  alt="">
+</div>
+{% if project.url %}
+  <a href="{{ project.url}}">Link</a>
+{% endif %}
 {% endfor%}
